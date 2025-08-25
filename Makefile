@@ -1,4 +1,4 @@
-.PHONY: [install test format lint dev]
+.PHONY: [install test format lint dev run]
 
 
 format:
@@ -12,3 +12,5 @@ lint:
 dev: format lint test
 	@echo "✅ All checks passed!"
 
+run:
+	uvicorn app.app:app --reload --port 5001
